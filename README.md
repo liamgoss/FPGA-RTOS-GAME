@@ -2,7 +2,7 @@
 The objective of this project is to develop a two player game running on the Micrium (µC) Real Time Operating System (RTOS). Each player uses their respective side of the host computer’s keyboard to control their player. This project will serve as the culmination of our study of embedded systems. Our deliverables will be composed of the various modules offered by the Intel Qsys Platform Designer. 
 
 # Guide
-A step-by-step report is available upon request but is too large for GitHub.
+A report that explains the necessary theoretical background, provides step-by-step custom system creation steps for Qsys, and more is available upon request but is too large for GitHub.
 
 # Background
 The DE2-115 development board is a field programmable gate array that provides the user with the means to develop simple logic circuits to complex embedded systems. The DE2 board provides numerous on board peripherals, ICs, and ports to integrate external components. For Example, we have the capability to receive input from the user from using the slide switches or push buttons. Each of which is memory addressable components. Once the data received from the user is received and processed, the result can be displayed onto the LCD screen, LEDS, or a display connected to the VGA port. 

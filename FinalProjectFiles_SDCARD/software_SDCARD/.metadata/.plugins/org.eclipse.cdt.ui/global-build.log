@@ -1,0 +1,44 @@
+15:56:27 **** Incremental Build of configuration Nios II for project sdtest ****
+make all 
+Info: Building ../sdtest_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sdtest_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sdtest_bsp//HAL/inc -I../sdtest_bsp/ -I../sdtest_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_file':
+hello_world.c:53:35: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                 char *firstFile = filename;
+                                   ^
+hello_world.c:69:21: error: too many arguments to function 'alt_up_sd_card_get_attributes'
+                     alt_up_sd_card_get_attributes(file, &is_directory, &is_read_only, &is_hidden, &is_system, &is_archive, NULL, NULL);
+                     ^
+In file included from hello_world.c:24:0:
+../sdtest_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:101:11: note: declared here
+ short int alt_up_sd_card_get_attributes(short int file_handle);
+           ^
+make: *** [obj/default/hello_world.o] Error 1
+15:57:37 **** Build of configuration Nios II for project sdtest ****
+make all 
+Info: Building ../sdtest_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sdtest_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sdtest_bsp//HAL/inc -I../sdtest_bsp/ -I../sdtest_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_file':
+hello_world.c:53:35: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                 char *firstFile = filename;
+                                   ^
+Info: Linking sdtest.elf
+nios2-elf-g++  -T'../sdtest_bsp//linker.x' -msys-crt0='../sdtest_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../sdtest_bsp/   -Wl,-Map=sdtest.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sdtest.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert sdtest.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 16843008 --sidp 0x201000 --timestamp 1701557861 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name GameSystem --quartus_project_dir "C:/FinalProjectFiles_SDCARD" --jdi ../..//output_files/Final.jdi --sopcinfo C:/FinalProjectFiles_SDCARD/software_SDCARD/sdtest_bsp/../../GameSystem.sopcinfo
+Info: (sdtest.elf) 96 KBytes program size (code + initialized data).
+Info:              130968 KBytes free for stack + heap.
+Info: Creating sdtest.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sdtest.elf >sdtest.objdump
+[sdtest build complete]
+15:57:41 **** Incremental Build of configuration Nios II for project sdtest ****
+make all 
+Info: Building ../sdtest_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../sdtest_bsp/
+[BSP build complete]
+[sdtest build complete]

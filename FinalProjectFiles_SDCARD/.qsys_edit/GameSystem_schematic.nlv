@@ -1,0 +1,49 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst GameSystem.seven_seg_1 -pg 1 -lvl 3 -y 1010
+preplace inst GameSystem.nios2_gen2_0 -pg 1 -lvl 2 -y 350
+preplace inst GameSystem.KEYS -pg 1 -lvl 3 -y 230
+preplace inst GameSystem.seven_seg_2 -pg 1 -lvl 3 -y 1110
+preplace inst GameSystem.leds -pg 1 -lvl 3 -y 710
+preplace inst GameSystem.seven_seg_3 -pg 1 -lvl 3 -y 1210
+preplace inst GameSystem.ledg -pg 1 -lvl 3 -y 1810
+preplace inst GameSystem.sysid_qsys_0 -pg 1 -lvl 3 -y 630
+preplace inst GameSystem.seven_seg_4 -pg 1 -lvl 3 -y 1310
+preplace inst GameSystem.onchip_memory2_0 -pg 1 -lvl 3 -y 550
+preplace inst GameSystem.high_res_timer -pg 1 -lvl 3 -y 30
+preplace inst GameSystem.seven_seg_5 -pg 1 -lvl 3 -y 1410
+preplace inst GameSystem.system_timer -pg 1 -lvl 3 -y 350
+preplace inst GameSystem.seven_seg_6 -pg 1 -lvl 3 -y 1510
+preplace inst GameSystem.sdram -pg 1 -lvl 3 -y 810
+preplace inst GameSystem.seven_seg_7 -pg 1 -lvl 3 -y 1610
+preplace inst GameSystem.nios2_gen2_0.reset_bridge -pg 1
+preplace inst GameSystem.lcd -pg 1 -lvl 3 -y 450
+preplace inst GameSystem -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst GameSystem.jtag_uart_0 -pg 1 -lvl 3 -y 130
+preplace inst GameSystem.clk_0 -pg 1 -lvl 1 -y 370
+preplace inst GameSystem.nios2_gen2_0.clock_bridge -pg 1
+preplace inst GameSystem.nios2_gen2_0.cpu -pg 1
+preplace inst GameSystem.switches -pg 1 -lvl 3 -y 1710
+preplace inst GameSystem.seven_seg_0 -pg 1 -lvl 3 -y 910
+preplace netloc INTERCONNECT<net_container>GameSystem</net_container>(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)high_res_timer.reset,(SLAVE)seven_seg_7.reset,(MASTER)clk_0.clk_reset,(SLAVE)seven_seg_6.reset,(SLAVE)seven_seg_2.reset,(SLAVE)seven_seg_5.reset,(SLAVE)sdram.reset,(SLAVE)seven_seg_1.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)lcd.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)switches.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)leds.reset,(SLAVE)seven_seg_4.reset,(SLAVE)ledg.reset,(SLAVE)seven_seg_3.reset,(SLAVE)system_timer.reset,(SLAVE)KEYS.reset,(SLAVE)seven_seg_0.reset) 1 1 2 290 1860 750
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.seven_seg_3,(SLAVE)seven_seg_3.external_connection) 1 0 3 NJ 1240 NJ 1240 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.seven_seg_1,(SLAVE)seven_seg_1.external_connection) 1 0 3 NJ 1040 NJ 1040 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.lcd,(SLAVE)lcd.external_interface) 1 0 3 NJ 500 NJ 500 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)sdram.wire,(SLAVE)GameSystem.sdram_wire) 1 0 3 NJ 880 NJ 880 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)seven_seg_5.external_connection,(SLAVE)GameSystem.seven_seg_5) 1 0 3 NJ 1440 NJ 1440 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)seven_seg_4.external_connection,(SLAVE)GameSystem.seven_seg_4) 1 0 3 NJ 1340 NJ 1340 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)GameSystem.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.ledg,(SLAVE)ledg.external_connection) 1 0 3 NJ 1840 NJ 1840 NJ
+preplace netloc FAN_OUT<net_container>GameSystem</net_container>(SLAVE)KEYS.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)high_res_timer.irq,(SLAVE)system_timer.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 710
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.seven_seg_2,(SLAVE)seven_seg_2.external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)KEYS.external_connection,(SLAVE)GameSystem.keys) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc INTERCONNECT<net_container>GameSystem</net_container>(MASTER)nios2_gen2_0.data_master,(SLAVE)seven_seg_6.s1,(SLAVE)high_res_timer.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)system_timer.s1,(SLAVE)sdram.s1,(SLAVE)seven_seg_7.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)ledg.s1,(SLAVE)leds.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)switches.s1,(SLAVE)seven_seg_0.s1,(SLAVE)seven_seg_1.s1,(SLAVE)seven_seg_5.s1,(SLAVE)lcd.avalon_lcd_slave,(SLAVE)seven_seg_3.s1,(SLAVE)seven_seg_4.s1,(SLAVE)KEYS.s1,(SLAVE)seven_seg_2.s1) 1 1 2 330 1880 690
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)switches.external_connection,(SLAVE)GameSystem.switches) 1 0 3 NJ 1740 NJ 1740 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.seven_seg_7,(SLAVE)seven_seg_7.external_connection) 1 0 3 NJ 1640 NJ 1640 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)seven_seg_6.external_connection,(SLAVE)GameSystem.seven_seg_6) 1 0 3 NJ 1540 NJ 1540 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)GameSystem.seven_seg_0,(SLAVE)seven_seg_0.external_connection) 1 0 3 NJ 940 NJ 940 NJ
+preplace netloc EXPORT<net_container>GameSystem</net_container>(SLAVE)leds.external_connection,(SLAVE)GameSystem.leds) 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc FAN_OUT<net_container>GameSystem</net_container>(SLAVE)onchip_memory2_0.clk1,(SLAVE)sysid_qsys_0.clk,(SLAVE)sdram.clk,(SLAVE)seven_seg_6.clk,(SLAVE)system_timer.clk,(SLAVE)high_res_timer.clk,(SLAVE)seven_seg_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)seven_seg_7.clk,(SLAVE)switches.clk,(SLAVE)KEYS.clk,(SLAVE)seven_seg_3.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)seven_seg_4.clk,(SLAVE)leds.clk,(SLAVE)seven_seg_1.clk,(SLAVE)ledg.clk,(MASTER)clk_0.clk,(SLAVE)seven_seg_2.clk,(SLAVE)seven_seg_5.clk,(SLAVE)lcd.clk) 1 1 2 310 1760 730
+levelinfo -pg 1 0 80 960
+levelinfo -hier GameSystem 90 120 450 800 950

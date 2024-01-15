@@ -1,0 +1,9 @@
+15:10:22 **** Incremental Build of configuration Nios II for project rtos ****
+make all 
+Info: Building ../rtos_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../rtos_bsp/
+[BSP build complete]
+[rtos build complete]
+
+15:10:23 Build Finished (took 1s.135ms)
+

@@ -1,0 +1,59 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "Altera_UP_SD_Card_Avalon_Interface.h"
+
+short int tfile;
+void SD_init();
+int SD_read();
+void SD_write(int);
+
+//initializing SD card for read/write
+void SD_init()
+{
+	alt_up_sd_card_open_dev("/dev/SD_Card");
+	if(alt_up_sd_card_is_FAT16())
+		printf("Fat16 detected\n");
+}
+
+//read SD card
+int SD_read()
+{
+	int retval;
+	char zero = '0';
+	char temp;
+	temp = alt_up_sd_card_read(tfile);
+	retval = temp - zero;
+	return retval;
+}
+
+//write SD card
+void SD_write(int in)
+{
+	char zero = '0';
+	char intchar;
+	intchar = in + zero;
+	alt_up_sd_card_write(tfile, intchar);
+}
+
+
+int main() {
+	printf("Hello from Nios II!\n");
+
+    return 0;
+}

@@ -1,0 +1,246 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\intelFPGA_lite\16.1\FinalProjectFiles\GameSystem.qsys --block-symbol-file --output-directory=C:\intelFPGA_lite\16.1\FinalProjectFiles\GameSystem --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading FinalProjectFiles/GameSystem.qsys
+Progress: Reading input file
+Progress: Adding KEYS [altera_avalon_pio 16.1]
+Progress: Parameterizing module KEYS
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding high_res_timer [altera_avalon_timer 16.1]
+Progress: Parameterizing module high_res_timer
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 16.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding lcd [altera_up_avalon_character_lcd 16.1]
+Progress: Parameterizing module lcd
+Progress: Adding ledg [altera_avalon_pio 16.1]
+Progress: Parameterizing module ledg
+Progress: Adding leds [altera_avalon_pio 16.1]
+Progress: Parameterizing module leds
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 16.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 16.1]
+Progress: Parameterizing module sdram
+Progress: Adding seven_seg_0 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_0
+Progress: Adding seven_seg_1 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_1
+Progress: Adding seven_seg_2 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_2
+Progress: Adding seven_seg_3 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_3
+Progress: Adding seven_seg_4 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_4
+Progress: Adding seven_seg_5 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_5
+Progress: Adding seven_seg_6 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_6
+Progress: Adding seven_seg_7 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_7
+Progress: Adding switches [altera_avalon_pio 16.1]
+Progress: Parameterizing module switches
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding system_timer [altera_avalon_timer 16.1]
+Progress: Parameterizing module system_timer
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: GameSystem.KEYS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: GameSystem.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: GameSystem.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: GameSystem.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: GameSystem.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: GameSystem.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\intelFPGA_lite\16.1\FinalProjectFiles\GameSystem.qsys --synthesis=VERILOG --output-directory=C:\intelFPGA_lite\16.1\FinalProjectFiles\GameSystem\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading FinalProjectFiles/GameSystem.qsys
+Progress: Reading input file
+Progress: Adding KEYS [altera_avalon_pio 16.1]
+Progress: Parameterizing module KEYS
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding high_res_timer [altera_avalon_timer 16.1]
+Progress: Parameterizing module high_res_timer
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 16.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding lcd [altera_up_avalon_character_lcd 16.1]
+Progress: Parameterizing module lcd
+Progress: Adding ledg [altera_avalon_pio 16.1]
+Progress: Parameterizing module ledg
+Progress: Adding leds [altera_avalon_pio 16.1]
+Progress: Parameterizing module leds
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 16.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 16.1]
+Progress: Parameterizing module sdram
+Progress: Adding seven_seg_0 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_0
+Progress: Adding seven_seg_1 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_1
+Progress: Adding seven_seg_2 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_2
+Progress: Adding seven_seg_3 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_3
+Progress: Adding seven_seg_4 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_4
+Progress: Adding seven_seg_5 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_5
+Progress: Adding seven_seg_6 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_6
+Progress: Adding seven_seg_7 [altera_avalon_pio 16.1]
+Progress: Parameterizing module seven_seg_7
+Progress: Adding switches [altera_avalon_pio 16.1]
+Progress: Parameterizing module switches
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding system_timer [altera_avalon_timer 16.1]
+Progress: Parameterizing module system_timer
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: GameSystem.KEYS: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: GameSystem.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: GameSystem.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: GameSystem.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: GameSystem.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: GameSystem.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: GameSystem: Generating GameSystem "GameSystem" for QUARTUS_SYNTH
+Info: KEYS: Starting RTL generation for module 'GameSystem_KEYS'
+Info: KEYS:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=GameSystem_KEYS --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0001_KEYS_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0001_KEYS_gen//GameSystem_KEYS_component_configuration.pl  --do_build_sim=0  ]
+Info: KEYS: Done RTL generation for module 'GameSystem_KEYS'
+Info: KEYS: "GameSystem" instantiated altera_avalon_pio "KEYS"
+Info: high_res_timer: Starting RTL generation for module 'GameSystem_high_res_timer'
+Info: high_res_timer:   Generation command is [exec C:/intelFPGA_lite/16.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/16.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=GameSystem_high_res_timer --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0002_high_res_timer_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0002_high_res_timer_gen//GameSystem_high_res_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: high_res_timer: Done RTL generation for module 'GameSystem_high_res_timer'
+Info: high_res_timer: "GameSystem" instantiated altera_avalon_timer "high_res_timer"
+Info: jtag_uart_0: Starting RTL generation for module 'GameSystem_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=GameSystem_jtag_uart_0 --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0003_jtag_uart_0_gen//GameSystem_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'GameSystem_jtag_uart_0'
+Info: jtag_uart_0: "GameSystem" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: lcd: Starting Generation of Character LCD
+Info: lcd: "GameSystem" instantiated altera_up_avalon_character_lcd "lcd"
+Info: ledg: Starting RTL generation for module 'GameSystem_ledg'
+Info: ledg:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=GameSystem_ledg --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0005_ledg_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0005_ledg_gen//GameSystem_ledg_component_configuration.pl  --do_build_sim=0  ]
+Info: ledg: Done RTL generation for module 'GameSystem_ledg'
+Info: ledg: "GameSystem" instantiated altera_avalon_pio "ledg"
+Info: leds: Starting RTL generation for module 'GameSystem_leds'
+Info: leds:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=GameSystem_leds --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0006_leds_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0006_leds_gen//GameSystem_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: leds: Done RTL generation for module 'GameSystem_leds'
+Info: leds: "GameSystem" instantiated altera_avalon_pio "leds"
+Info: nios2_gen2_0: "GameSystem" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'GameSystem_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=GameSystem_onchip_memory2_0 --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0007_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0007_onchip_memory2_0_gen//GameSystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'GameSystem_onchip_memory2_0'
+Info: onchip_memory2_0: "GameSystem" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: sdram: Starting RTL generation for module 'GameSystem_sdram'
+Info: sdram:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=GameSystem_sdram --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0008_sdram_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0008_sdram_gen//GameSystem_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'GameSystem_sdram'
+Info: sdram: "GameSystem" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: seven_seg_0: Starting RTL generation for module 'GameSystem_seven_seg_0'
+Info: seven_seg_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=GameSystem_seven_seg_0 --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0009_seven_seg_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0009_seven_seg_0_gen//GameSystem_seven_seg_0_component_configuration.pl  --do_build_sim=0  ]
+Info: seven_seg_0: Done RTL generation for module 'GameSystem_seven_seg_0'
+Info: seven_seg_0: "GameSystem" instantiated altera_avalon_pio "seven_seg_0"
+Info: switches: Starting RTL generation for module 'GameSystem_switches'
+Info: switches:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=GameSystem_switches --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0010_switches_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0010_switches_gen//GameSystem_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches: Done RTL generation for module 'GameSystem_switches'
+Info: switches: "GameSystem" instantiated altera_avalon_pio "switches"
+Info: sysid_qsys_0: "GameSystem" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: system_timer: Starting RTL generation for module 'GameSystem_system_timer'
+Info: system_timer:   Generation command is [exec C:/intelFPGA_lite/16.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/16.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=GameSystem_system_timer --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0012_system_timer_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0012_system_timer_gen//GameSystem_system_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: system_timer: Done RTL generation for module 'GameSystem_system_timer'
+Info: system_timer: "GameSystem" instantiated altera_avalon_timer "system_timer"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_019: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "GameSystem" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "GameSystem" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "GameSystem" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'GameSystem_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/16.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/16.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=GameSystem_nios2_gen2_0_cpu --dir=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0015_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/16.1/quartus/bin64/ --verilog --config=C:/Users/luigi/AppData/Local/Temp/alt9689_8325390238947979011.dir/0015_cpu_gen//GameSystem_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.11.28 13:26:37 (*) Starting Nios II generation
+Info: cpu: # 2023.11.28 13:26:37 (*)   Checking for plaintext license.
+Info: cpu: # 2023.11.28 13:26:38 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/16.1/quartus/bin64/
+Info: cpu: # 2023.11.28 13:26:38 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2023.11.28 13:26:38 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2023.11.28 13:26:38 (*)   Plaintext license not found.
+Info: cpu: # 2023.11.28 13:26:38 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2023.11.28 13:26:39 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/16.1/quartus/bin64/
+Info: cpu: # 2023.11.28 13:26:39 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2023.11.28 13:26:39 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2023.11.28 13:26:39 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2023.11.28 13:26:39 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.11.28 13:26:39 (*)   Creating all objects for CPU
+Info: cpu: # 2023.11.28 13:26:39 (*)     Testbench
+Info: cpu: # 2023.11.28 13:26:39 (*)     Instruction decoding
+Info: cpu: # 2023.11.28 13:26:39 (*)       Instruction fields
+Info: cpu: # 2023.11.28 13:26:39 (*)       Instruction decodes
+Info: cpu: # 2023.11.28 13:26:40 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2023.11.28 13:26:40 (*)       Instruction controls
+Info: cpu: # 2023.11.28 13:26:40 (*)     Pipeline frontend
+Info: cpu: # 2023.11.28 13:26:40 (*)     Pipeline backend
+Info: cpu: # 2023.11.28 13:26:44 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.11.28 13:26:46 (*)   Creating encrypted RTL
+Info: cpu: # 2023.11.28 13:26:47 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'GameSystem_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: lcd_avalon_lcd_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "lcd_avalon_lcd_slave_burst_adapter"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: lcd_avalon_lcd_slave_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "lcd_avalon_lcd_slave_rsp_width_adapter"
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/intelFPGA_lite/16.1/FinalProjectFiles/GameSystem/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: GameSystem: Done "GameSystem" with 43 modules, 73 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

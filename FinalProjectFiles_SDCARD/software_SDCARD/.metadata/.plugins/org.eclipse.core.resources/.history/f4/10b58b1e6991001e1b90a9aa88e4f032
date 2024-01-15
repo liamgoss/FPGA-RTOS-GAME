@@ -1,0 +1,64 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "Altera_UP_SD_Card_Avalon_Interface.h"
+
+#include <stdio.h>
+#include "Altera_UP_SD_Card_Avalon_Interface.h"
+
+#define SECTOR_SIZE 512
+
+// Function to read a sector from the SD card
+int read_sector(int sector_number, char *buffer) {
+    // Assuming the SD card interface is initialized and the card is present
+    if (alt_up_sd_card_is_Present() && alt_up_sd_card_is_FAT16()) {
+        if (Read_Sector_Data(sector_number, fat_partition_offset_in_512_byte_sectors)) {
+            // Copy the sector data to the buffer
+            for (int i = 0; i < SECTOR_SIZE; i++) {
+                buffer[i] = IORD_8DIRECT(buffer_memory, i);
+            }
+            return 0; // Success
+        } else {
+            printf("Error reading sector %d\n", sector_number);
+            return -1;
+        }
+    } else {
+        printf("SD card not present or not formatted as FAT16\n");
+        return -1;
+    }
+}
+
+int main() {
+	printf("Hello from Nios II!\n");
+    // Assuming the text file is in sector 644
+    int sector_number = 644;
+
+    char buffer[SECTOR_SIZE];
+
+    // Read the sector from the SD card
+    if (read_sector(sector_number, buffer) == 0) {
+        // Output the content to the console
+        printf("Sector %d content:\n", sector_number);
+        for (int i = 0; i < SECTOR_SIZE; i++) {
+            putchar(buffer[i]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

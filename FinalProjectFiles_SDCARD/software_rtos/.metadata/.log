@@ -1,0 +1,25 @@
+!SESSION 2023-11-28 14:55:10.924 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 14:56:35.409
+!MESSAGE Indexed 'rtos_bsp' (96 sources, 165 headers) in 3.03 sec: 6,790 declarations; 16,604 references; 17 unresolved inclusions; 2 syntax errors; 57 unresolved names (0.24%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 14:56:36.558
+!MESSAGE Indexed 'rtos' (1 sources, 21 headers) in 0.13 sec: 990 declarations; 1,625 references; 1 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.08%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 14:59:43.976
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x201000]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 14:59:45.999
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x201000 /cygdrive/c/FinalProjectFiles/software_rtos/rtos/rtos.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 15:10:24.432
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x201000]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 15:10:26.559
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x201000 /cygdrive/c/FinalProjectFiles/software_rtos/rtos/rtos.elf]

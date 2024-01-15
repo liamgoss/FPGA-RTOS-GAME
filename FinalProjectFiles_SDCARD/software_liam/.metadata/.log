@@ -1,0 +1,19 @@
+!SESSION 2023-11-28 14:44:58.049 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 14:46:08.465
+!MESSAGE Indexed 'Final_bsp' (84 sources, 157 headers) in 2.90 sec: 5,522 declarations; 8,809 references; 24 unresolved inclusions; 3 syntax errors; 66 unresolved names (0.46%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 14:46:09.278
+!MESSAGE Indexed 'Final' (1 sources, 21 headers) in 0.09 sec: 983 declarations; 1,599 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 14:49:41.222
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x201000]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-11-28 14:49:43.384
+!MESSAGE Executing: [C:/intelfpga_lite/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x201000 /cygdrive/c/FinalProjectFiles/software_liam/Final/Final.elf]

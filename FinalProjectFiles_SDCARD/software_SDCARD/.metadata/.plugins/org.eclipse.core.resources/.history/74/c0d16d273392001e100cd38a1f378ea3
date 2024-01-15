@@ -1,0 +1,241 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+#include "altera_avalon_timer_regs.h"
+#include "altera_avalon_timer.h"
+#include "Altera_UP_SD_Card_Avalon_Interface.h"
+
+
+short int tfile;
+void SD_init();
+int SD_read();
+void SD_write(int);
+
+//initializing SD card for read/write
+void SD_init()
+{
+	// device is named SD_Card in Qsys
+	alt_up_sd_card_open_dev("/dev/SD_Card");
+	if(alt_up_sd_card_is_FAT16())
+		printf("Fat16 detected\n");
+}
+
+void read_file(alt_up_sd_card_dev *device, const char *filename) {
+    int connected = 0;
+
+    while (1) {
+        if ((connected == 0) && (alt_up_sd_card_is_Present())) {
+            printf("Card connected.\n");
+
+            if (alt_up_sd_card_is_FAT16()) {
+                printf("FAT16 file system detected.\n");
+                printf("Looking for file: '%s'\n", filename);
+
+                char *firstFile = filename;
+                alt_up_sd_card_find_first(".", firstFile);
+
+                short file;
+                while ((file = alt_up_sd_card_find_next(firstFile)) != -1) {
+                    int contentCount = 0;
+                    if (strcmp(firstFile, filename) == 0) {
+
+
+                        short fileHandle = alt_up_sd_card_fopen(firstFile, false);
+
+
+                        if (fileHandle != -1) {
+                        	if (firstFile != filename) {
+                        		continue;
+                        	}
+							printf("===========================\n");
+							printf("Found file: '%s'\n", firstFile);
+                        	printf("File handle: %i\n", fileHandle);
+							printf("Contents:\n");
+                            short int readCharacter;
+                            while ((readCharacter = alt_up_sd_card_read(fileHandle)) != -1) {
+                                printf("%c", readCharacter);
+                                ++contentCount;
+                            }
+
+                            printf("\nContent size: %i", contentCount);
+                            printf("\n===========================\n\n");
+
+                            // Close the file after reading
+                            alt_up_sd_card_fclose(fileHandle);
+                        } else {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+                }
+
+                // Exit the function after iterating through all files
+                break;
+            } else {
+                printf("Unknown file system.\n");
+            }
+            connected = 1;
+        } else if ((connected == 1) && (alt_up_sd_card_is_Present() == false)) {
+            printf("Card disconnected.\n");
+            connected = 0;
+        }
+    }
+}
+
+alt_up_sd_card_dev *init_SD_card(void) {
+    alt_up_sd_card_dev *device = alt_up_sd_card_open_dev("/dev/SD_Card");
+    if (device != NULL) {
+        printf("Initialized. Waiting for SD card...\n");
+        return device;
+    } else {
+        printf("Initialization failed.\n");
+        return NULL;
+    }
+}
+/*
+void init_SD_and_load_file(void) {
+	alt_up_sd_card_dev *device = NULL;
+	int connected = 0;
+	device = alt_up_sd_card_open_dev("/dev/SD_Card");
+	if (device != NULL) {
+		printf("Initialized. Waiting for SD card...\n");
+	while(1) {
+		if ((connected == 0) && (alt_up_sd_card_is_Present())) {
+			printf("Card connected.\n");
+			if (alt_up_sd_card_is_FAT16()) {
+				printf("FAT16 file system detected.\n");
+				printf("Looking for first file.\n");
+				char * firstFile = "test.txt";
+				alt_up_sd_card_find_first(".", firstFile);
+				printf("Volume Name: '%s'\n\n", firstFile);
+				short file;
+				while((file = alt_up_sd_card_find_next(firstFile)) != -1) {
+					int contentCount = 0;
+					printf("===========================\n");
+					printf("Found file: '%s'\n", firstFile);
+					short fileHandle = alt_up_sd_card_fopen(firstFile,false);
+					printf("File handle: %i\n", fileHandle);
+					printf("Contents:\n");
+					short int readCharacter;
+					while ((readCharacter = alt_up_sd_card_read(fileHandle)) != -1) {
+						printf("%c", readCharacter);
+						++contentCount;
+					}
+					printf("\nContent size: %i", contentCount);
+					printf("\n===========================\n\n");
+				}
+			}
+			else {
+				printf("Unknown file system.\n");
+			}
+			connected = 1;
+		}
+		else if ((connected == 1) && (alt_up_sd_card_is_Present() == false)) {
+			printf("Card disconnected.\n");
+			connected = 0;
+		}
+		}
+	}
+	else {
+		printf("Initialization failed.\n");
+	}
+	return;
+}
+
+*/
+//read SD card
+int SD_read()
+{
+	int retval;
+	char zero = '0';
+	char temp;
+	temp = alt_up_sd_card_read(tfile);
+	retval = temp - zero;
+	return retval;
+}
+
+//write SD card
+void SD_write(int in)
+{
+	char zero = '0';
+	char intchar;
+	intchar = in + zero;
+	alt_up_sd_card_write(tfile, intchar);
+}
+
+
+#define SECTOR_SIZE 512
+
+// Function to read a sector from the SD card
+int read_sector(const char *file_path, int sector_number, char *buffer) {
+    FILE *file = fopen(file_path, "rb");
+
+    if (file == NULL) {
+        perror("Error opening file");
+        return -1;
+    }
+
+    // Seek to the specified sector
+    fseek(file, sector_number * SECTOR_SIZE, SEEK_SET);
+
+    // Read the sector into the buffer
+    size_t bytesRead = fread(buffer, 1, SECTOR_SIZE, file);
+
+    fclose(file);
+
+    if (bytesRead != SECTOR_SIZE) {
+        perror("Error reading sector");
+        return -1;
+    }
+
+    return 0;
+}
+
+int main() {
+	/*
+    const char *file_path = "/dev/SD_Card";
+
+    // Assuming the text file is in sector
+    int sector_number = 768;
+
+    char buffer[SECTOR_SIZE];
+
+    // Read the sector from the SD card
+    if (read_sector(file_path, sector_number, buffer) == 0) {
+        // Output the content to the console
+        printf("Sector %d content:\n", sector_number);
+        for (int i = 0; i < SECTOR_SIZE; i++) {
+            putchar(buffer[i]);
+        }
+        printf("\n");
+    }
+	*/
+
+	alt_up_sd_card_dev *device = init_SD_card();
+
+	if (device != NULL) {
+		read_file(device, "test.txt");
+	}
+	printf("Done\n");
+
+	//init_SD_and_load_file();
+    return 0;
+}
